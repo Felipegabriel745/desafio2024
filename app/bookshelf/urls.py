@@ -1,8 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 from .views import (
     AuthorListView, AuthorDetailView, AuthorCreateView, AuthorUpdateView, AuthorDeleteView,
     BookListView, BookDetailView, BookCreateView, BookUpdateView, BookDeleteView
 )
+
 
 urlpatterns = [
     path('authors/', AuthorListView.as_view(), name='author_list'),
